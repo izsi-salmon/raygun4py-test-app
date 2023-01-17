@@ -18,6 +18,10 @@ This test app has been set up with the `'filtered_keys'` config item being passe
 
 You can follow the steps below to set up and run the test app.
 
+**Findings**
+
+- Tried different syntax for passing the config: `flask.Provider(app, api_key, {'filtered_keys': ['RAYGUN_API_KEY']}).attach()`, `flask.Provider(app, api_key, {}).attach()`. Neither of these worked. Instead I got the error: `TypeError: Provider.__init__() takes 3 positional arguments but 4 were given`.
+
 ## Python test app
 
 **Project set up**
